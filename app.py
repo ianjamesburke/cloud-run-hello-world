@@ -20,7 +20,7 @@ def verify_password(username, password):
 # Protected route
 @auth.login_required
 @app.route('/')
-def hello_world():
+def hello_world_route():
     return render_template('hello_world.html')
 
 if __name__ == '__main__':
