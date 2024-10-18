@@ -1,4 +1,4 @@
 Flask==3.0.3
-gunicorn==23.2
+gunicorn==22
 pytest==8.3.3
 flask-httpauth==4.8.0
