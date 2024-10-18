@@ -17,11 +17,14 @@ def verify_password(username, password):
     return False
 
 
+
 # Protected route
 @app.route('/')
 @auth.login_required
 def hello_world_route():
     return render_template('hello_world.html')
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
