@@ -1,5 +1,5 @@
 # cloud-run-hello-world
-A simple hello world starter for a flask cloud run app for continual deployment through github
+A simple hello world starter for a flask app hosted on google cloud run with continual deployment through github pushes
 
 ### Features
 - pre-deployment testing with pytest
