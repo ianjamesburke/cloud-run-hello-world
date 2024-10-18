@@ -18,8 +18,8 @@ def verify_password(username, password):
 
 
 # Protected route
-@auth.login_required
 @app.route('/')
+@auth.login_required
 def hello_world_route():
     return render_template('hello_world.html')
 
