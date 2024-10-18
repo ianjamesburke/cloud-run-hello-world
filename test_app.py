@@ -1,10 +1,11 @@
+from flask.testing import FlaskClient
 from app import app, auth
 import pytest
 
 
-# Define a pytest fixture named 'client' to initialize an authorized test client
+# Define a pytest xl named 'client' to initialize an authorized test client
 @pytest.fixture(name='client')
-def initialize_authorized_test_client(monkeypatch):
+def initialize_authorized_test_client(monkeypatch: pytest.MonkeyPatch):
     # Set the app to testing mode
     app.testing = True
     # Create a test client for the app
@@ -18,6 +19,6 @@ def initialize_authorized_test_client(monkeypatch):
 
 
 
-def test_hello_world_route(client):
+def test_hello_world_route(client: FlaskClient):
     response = client.get('/')
     assert response.status_code == 200
