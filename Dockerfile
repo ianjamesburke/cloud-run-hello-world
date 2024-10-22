@@ -22,6 +22,9 @@ EXPOSE 8080
 
 # Define environment variable
 ENV FLASK_APP=run.py
+# Set Flask to production mode
+ENV FLASK_ENV=production
+
 
 # Run app.py when the container launches
 CMD ["gunicorn", "-b", "0.0.0.0:8080", "--timeout", "180", "run:app"]
