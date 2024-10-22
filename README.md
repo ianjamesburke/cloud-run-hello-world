@@ -1,4 +1,5 @@
-# cloud-run-hello-world
+# Flask Google Cloud Run Starter
+
 A simple hello world starter for a flask app hosted on google cloud run with continual deployment through github pushes
 
 # Live Demo
