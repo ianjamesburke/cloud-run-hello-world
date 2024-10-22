@@ -28,4 +28,4 @@ ENV FLASK_ENV=production
 
 
 # Run app.py when the container launches
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "--timeout", "180", "run:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8080", "--timeout", "300", "run:app"]
