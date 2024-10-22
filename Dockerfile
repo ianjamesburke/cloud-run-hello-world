@@ -21,7 +21,7 @@ FROM base as final
 EXPOSE 8080
 
 # Define environment variable
-ENV FLASK_APP=app.py
+ENV FLASK_APP=run.py
 
 # Run app.py when the container launches
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8080", "--timeout", "180", "run:app"]
