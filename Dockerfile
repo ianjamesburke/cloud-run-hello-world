@@ -13,7 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Test stage
 FROM base as test
 # Run tests
-RUN pytest
+ENV PYTHONPATH=/app
+RUN pytest tests/
 
 # Final stage
 FROM base as final
